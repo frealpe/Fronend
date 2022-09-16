@@ -6,11 +6,13 @@ import 'package:flutter/material.dart';
   class Genero_card extends StatelessWidget {
 
 final List genderItems;
+final String estado;
 
 const Genero_card({
   super.key, 
   
-   required this.genderItems,
+   required this.genderItems, 
+   required this.estado,
   });
 
 
@@ -71,8 +73,11 @@ Widget build(BuildContext context) {
                   }
                 },
                 onChanged: (value) {
-
+                  if(estado =='genero'){
                   productoFormProvider.copyProductoWith(genero: value.toString());
+                  }else{
+                    productoFormProvider.copyProductoWith(color: value.toString());
+                  }
                   //Do something when changing the item if you want.
                 },
                 onSaved: (value) {

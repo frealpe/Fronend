@@ -123,6 +123,16 @@ class _ProductoViewForm extends StatelessWidget {
   'CABALLERO',
 ];
 
+  final List<String> colorItems = [
+  'NEGRO',
+  'ROJO',
+  'AZUL',
+  'AMARILLO',
+  'OTROS',
+
+];
+
+
       final productosbase = Provider.of<ProductosProvider>(context);
       final productoFormProvider = Provider.of<ProductoFormProvider>(context);
       final producto = productoFormProvider.producto!;
@@ -140,10 +150,14 @@ class _ProductoViewForm extends StatelessWidget {
 ///////////////////////////////////////////////////////////////////////////////////////////
             SizedBox( height: 20 ),   
 ////////////////////////////////////////////////////////////////////////////////////////////
-            Genero_card(genderItems:genderItems),
+            Genero_card(genderItems:genderItems,estado: 'genero'),
 ////////////////////////////////////////////////////////////////////////////////////////////
             SizedBox( height: 20 ),   
 ////////////////////////////////////////////////////////////////////////////////////////////            
+            Genero_card(genderItems:colorItems,estado: 'genero'),
+////////////////////////////////////////////////////////////////////////////////////////////            
+            SizedBox( height: 20 ),   
+////////////////////////////////////////////////////////////////////////////////////////////                        
             ConstrainedBox(
               constraints: BoxConstraints( maxWidth: 250 ),
               child: TextFormField(
