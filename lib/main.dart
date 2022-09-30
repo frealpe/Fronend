@@ -66,11 +66,16 @@ class AppState extends StatelessWidget {
           create: (_)=> CategoriaFormProvider()
           ),
 
-
         ChangeNotifierProvider(
           //No necesita el Lazy por que se crea por demanda 
           create: (_)=> CategoriesProvider()
           ),
+        
+        ChangeNotifierProvider(
+          //No necesita el Lazy por que se crea por demanda 
+          create: (_)=> CounterProvider()
+          ),
+
 
       ],
       child: MyApp(),

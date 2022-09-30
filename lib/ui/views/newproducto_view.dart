@@ -1,5 +1,4 @@
 
-import 'package:admin_dashboard/providers/producto_form_provider.dart';
 import 'package:admin_dashboard/providers/providers.dart';
 import 'package:admin_dashboard/services/notifications_service.dart';
 import 'package:admin_dashboard/ui/cards/cards.dart';
@@ -154,7 +153,24 @@ class _ProductoViewForm extends StatelessWidget {
 ////////////////////////////////////////////////////////////////////////////////////////////
             SizedBox( height: 20 ),   
 ////////////////////////////////////////////////////////////////////////////////////////////            
-            Genero_card(genderItems:colorItems,estado: 'color'),
+            //Genero_card(genderItems:colorItems,estado: 'color'),
+             ConstrainedBox(
+              constraints: BoxConstraints( maxWidth: 250 ),
+              child: TextFormField(
+                initialValue: producto.color,
+                decoration: CustomInputs.formInputDecoration(
+                  hint: 'Color del Producto', 
+                  label: 'Color', 
+                  icon: Icons.store_outlined
+                ),
+                onChanged: ( value )=> productoFormProvider.copyProductoWith( color: value ),
+                validator: ( value ) {
+                  if ( value == null || value.isEmpty ) return 'Ingrese el color del producto.';
+                  if ( value.length < 4 ) return 'El nombre debe ser mayor a cuatro letras.';
+                  return null;
+                },
+              ),
+            ),           
 ////////////////////////////////////////////////////////////////////////////////////////////            
             SizedBox( height: 20 ),   
 ////////////////////////////////////////////////////////////////////////////////////////////                        

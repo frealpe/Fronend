@@ -1,3 +1,5 @@
+export 'package:admin_dashboard/providers/counter_provider.dart';
+
 export 'package:admin_dashboard/providers/producto_form_provider.dart';
 export 'package:admin_dashboard/providers/categoria_form_provider.dart';
 export 'package:admin_dashboard/providers/categories_provider.dart';

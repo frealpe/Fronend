@@ -10,9 +10,9 @@ class BolsosApi{
 
   static void configureDio(){
 
-    //_dio.options.baseUrl= 'https://backend-marron.herokuapp.com/api';
+    _dio.options.baseUrl= 'https://backend-marron.herokuapp.com/api';
 
-    _dio.options.baseUrl= 'http://localhost:8080/api';
+    //_dio.options.baseUrl= 'http://localhost:8080/api';
 
     //Configurar Headers
 

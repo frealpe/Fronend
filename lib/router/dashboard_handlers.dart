@@ -2,12 +2,12 @@
 import 'package:admin_dashboard/providers/auth_provider.dart';
 import 'package:admin_dashboard/providers/sidemenu_provider.dart';
 import 'package:admin_dashboard/router/router.dart';
+import 'package:admin_dashboard/ui/views/categories_view.dart';
 import 'package:admin_dashboard/ui/views/newcategories.dart';
 import 'package:admin_dashboard/ui/views/newproducto_view.dart';
 import 'package:admin_dashboard/ui/views/producto_view.dart';
 import 'package:admin_dashboard/ui/views/productos_view.dart';
 
-import 'package:admin_dashboard/ui/views/categories_view.dart';
 import 'package:admin_dashboard/ui/views/dashboard_view.dart';
 
 import 'package:admin_dashboard/ui/views/login_view.dart';

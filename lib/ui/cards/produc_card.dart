@@ -1,8 +1,6 @@
 import 'package:admin_dashboard/providers/providers.dart';
 import 'package:admin_dashboard/services/notifications_service.dart';
 import 'package:admin_dashboard/ui/cards/cards.dart';
-import 'package:admin_dashboard/ui/cards/catego_card.dart';
-import 'package:admin_dashboard/ui/cards/white_card.dart';
 import 'package:admin_dashboard/ui/inputs/custom_inputs.dart';
 
 import 'package:flutter/material.dart';
